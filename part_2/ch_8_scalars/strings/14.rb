@@ -4,6 +4,5 @@ puts text.chop
 puts text.chomp('lack')
 
 text.clear
-puts 'clear text'
-puts text
+puts text.size
 
