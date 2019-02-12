@@ -1,3 +1,4 @@
-names = %w{ David Black Yukihiro Matsumoto }
-e = names.enum_for(:select)
-p e.each {|n| n.include?('a') }
+array = %w{ cat dog rabbit }
+e = array.map
+
+p e.each {|animal| animal.capitalize}

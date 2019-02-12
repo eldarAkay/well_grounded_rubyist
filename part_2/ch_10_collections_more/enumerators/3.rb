@@ -1,7 +1,10 @@
+a = [1, 2, 3, 4, 5]
 e = Enumerator.new do |y|
-  puts "Starting up the block!"
-  (1..3).each {|i| y << i }
-  puts "Exiting the block!"
+  total = 0
+  until a.empty?
+    total += a.pop
+    y << total
+  end
 end
-p e.to_a
-p e.select {|x| x > 2 }
+
+p e.take(2)

@@ -1,5 +1,5 @@
-array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+array = [1, 2, 3]
 
-array.each {|value| print value}
-p ''
-array.cycle(3) {|value| print value}
+p array.reduce(0) {|accumulator, n| accumulator + n}
+# as same as
+p array.inject(0) {|accumulator, n| accumulator + n}

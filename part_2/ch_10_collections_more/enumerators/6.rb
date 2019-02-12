@@ -1,4 +1,6 @@
-array = %w{ cat dog rabbit }
-e = array.map
+h = { "cat" => "feline", "dog" => "canine", "cow" => "bovine" }
+p h.select {|key,value| key =~ /c/ }
 
-p e.each {|animal| animal.capitalize}
+p e = h.enum_for(:select)
+p e.each {|key,value| key =~ /c/ }
+

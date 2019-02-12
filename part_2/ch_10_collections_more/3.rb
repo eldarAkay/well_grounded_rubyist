@@ -1,22 +1,6 @@
-class Rainbow
-  include Enumerable
-  def each
-    yield "red"
-    yield "orange"
-    yield "yellow"
-    yield "green"
-    yield "blue"
-    yield "indigo"
-    yield "violet"
-  end
-end
+states =  %w(Alaska Alabama Arkansas American\ Samoa Arizona California Colorado Connecticut District\ of\ Columbia Delaware Florida Georgia Guam Hawaii Iowa Idaho Illinois Indiana Kansas Kentucky Louisiana Massachusetts Maryland Maine Michigan Minnesota Missouri Mississippi Montana North\ Carolina North\ Dakota Nebraska New\ Hampshire New\ Jersey New\ Mexico Nevada New\ York Ohio Oklahoma Oregon Pennsylvania Puerto\ Rico Rhode\ Island South\ Carolina South\ Dakota Tennessee Texas Utah Virginia Virgin\ Islands Vermont Washington Wisconsin West\ Virginia Wyoming)
 
-r = Rainbow.new
-r.each do |color|
-  puts "Next color: #{color}"
-end
-
-y_color = r.find { |color| color.start_with?('y') }
-puts "first color that starts with y is #{y_color}"
-
-Array
+p states.include?('Louisiana')
+p states.any? {|state| state =~ / /}
+p states.any? {|state| state =~ /West/}
+p states.none? {|state| state =~ /East/}

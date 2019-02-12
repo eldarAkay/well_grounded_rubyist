@@ -1,8 +1,17 @@
-h = { "cat" => "feline", "dog" => "canine", "cow" => "bovine" }
-p h.each { }
+module Music
+  class Scale
+    include Enumerable
+    
+    NOTES = %w{ c c# d d# e f f# g a a# b }
 
-e = h.to_enum
-p e.each { }
+    def play
+      NOTES.each {|note| yield note}
+    end
+  end
+end
 
-p e.select {|key,value| key =~ /c/ }
+scale = Music::Scale.new
+scale.play {|note| puts "Next note is #{note}" }
 
+enum = scale.enum_for(:play)
+p enum.map{|note| note.upcase}

@@ -12,11 +12,7 @@ class Rainbow
 end
 
 r = Rainbow.new
-r.each do |color|
-  puts "Next color: #{color}"
-end
-
-y_color = r.find { |color| color.start_with?('y') }
-puts "first color that starts with y is #{y_color}"
-
-Array
+p r.find_all { |color| color }
+p r.select { |color| color.size == 6 }
+p r.map { |color| color[0, 3]}
+p r.drop_while { |color| color.size < 5 }

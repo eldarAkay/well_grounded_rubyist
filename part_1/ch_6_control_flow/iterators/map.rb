@@ -12,7 +12,7 @@ class Array
     acc
   end
 
-  puts array.my_first_map { |name| name.upcase}
+  p array.my_first_map { |name| name.upcase }
 
 
   def my_each
@@ -30,7 +30,7 @@ class Array
     acc
   end
 
-  puts array.my_map_bases_on_my_each_explained
+  p array.my_map_bases_on_my_each_explained
 
   #
   def my_map_bases_on_my_each
@@ -40,7 +40,7 @@ class Array
   end
   # yield(e) returns the result of execution { |name| name.upcase }
 
-  puts array.my_map_bases_on_my_each { |name| name.upcase }
+  p array.my_map_bases_on_my_each { |name| name.upcase }
 end
 
 

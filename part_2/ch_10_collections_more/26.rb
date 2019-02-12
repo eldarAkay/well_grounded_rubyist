@@ -1,4 +1,6 @@
-names = %w{ David Yukihiro Chad Amy }
+string = 'abcde'
+string.each_byte { |b| p b }
+string.each_char { |c| p c }
 
-p names.map { |name| name.upcase }
-p names.map(&:upcase)
+str = "This string\nhas three\nlines"
+str.each_line { |line| puts line}

@@ -1,9 +1,4 @@
-names = ["George Washington", "John Adams", "Thomas Jefferson", "James Madison"]
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-names.each.with_index do |president, index|
-  puts "#{index + 1} #{president}"
-  end
-
-names.each_index do |index|
-  puts index
-end
+array.each_slice(3) {|slice| p slice}
+array.each_cons(3) {|cons| p cons}

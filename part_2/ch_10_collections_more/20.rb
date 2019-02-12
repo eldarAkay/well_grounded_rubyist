@@ -1,4 +1,1 @@
-state_hash = {"New York" => "NY", "Maine" => "ME", "Alaska" => "AK", "Alabama" => "AL"}
-p state_hash.min
-p state_hash.min_by { |key, value| key.size}
-p state_hash.min_by { |key, value| value}
+[1, 2, 3].reverse_each { |e| puts e * 10 }

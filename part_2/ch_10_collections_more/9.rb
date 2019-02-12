@@ -1,18 +1,5 @@
-class Rainbow
-  include Enumerable
-  def each
-    yield "red"
-    yield "orange"
-    yield "yellow"
-    yield "green"
-    yield "blue"
-    yield "indigo"
-    yield "violet"
-  end
-end
-
-r = Rainbow.new
-p r.find_all { |color| color }
-p r.select { |color| color.size == 6 }
-p r.map { |color| color[0, 3]}
-p r.drop_while { |color| color.size < 5 }
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+p a.find_all { |item| item > 5 }
+p a.select { |item| item > 5 }
+p a.select { |item| item > 500 }
+p a.reject { |item| item > 5 }
