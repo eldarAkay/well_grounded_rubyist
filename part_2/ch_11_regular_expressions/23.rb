@@ -1,0 +1,1 @@
+p [1, 2, 3, "Hello"].select {|n| n.is_a?(Integer)}
