@@ -13,7 +13,10 @@ end
 class C
   include M
   include N
+  extend M
 end
 
 c = C.new
 c.report
+
+C.report
